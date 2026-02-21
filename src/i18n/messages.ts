@@ -10,7 +10,7 @@ async function getMessagesForLocale(locale: string) {
   } catch (error) {
     // Fallback to default locale if translation not found
     console.warn(`Translation for locale "${locale}" not found, falling back to default`);
-    const defaultMessages = (await import(`@/messages/${locale}.json`)).default;
+    const defaultMessages = (await import(`@/messages/en.json`)).default;
     return defaultMessages;
   }
 }
